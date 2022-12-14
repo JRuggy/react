@@ -13,6 +13,12 @@
   }
 }
 
+/* These are myb configurations for the springboot */
+.kaka{
+  color: aquamarine;
+  /* margin-left: 7cm; */
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,4 +41,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.kuku{
+  color: rgb(207, 205, 68);
 }
