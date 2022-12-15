@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import EmployeeService from '../services/EmployeeService';
 
 class ListEmployeeComponent extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
 
         this.state = {
@@ -10,10 +10,10 @@ class ListEmployeeComponent extends Component {
         }
     }
 
-    componentDidMount(){
-        EmployeeService.getEmployees().then((res) =>{
+    componentDidMount() {
+        EmployeeService.getEmployees().then((res) => {
             // console.log(res)
-            this.setState({employees: res.data});
+            this.setState({ employees: res.data });
             console.log(this.state.employees)
         })
     }
@@ -25,22 +25,24 @@ class ListEmployeeComponent extends Component {
                     <table className='table table-striped table-bordered'>
                         <thead>
                             <tr>
-                                <th>Employees First Name</th>
-                                <th>Employees Last Name</th>
-                                <th>Employees Email ID Name</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Date of Birth</th>
                                 <th>Age</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             {
                                 this.state.employees.map(
                                     employee =>
-                                    <tr key={employee.id}>
-                                        <td> { employee.name } </td>
-                                        <td> { employee.email } </td>
-                                        <td> { employee.dob } </td>
-                                        <td> { employee.age } </td>
-                                    </tr>
+                                        <tr key={employee.id}>
+                                            <td> {employee.name} </td>
+                                            <td> {employee.email} </td>
+                                            <td> {employee.dob} </td>
+                                            <td> {employee.age} </td>
+                                            <td> <button className='btn btn-sm btn-danger'>Delete</button> <button className='btn btn-sm btn-success'>Approve</button> </td>
+                                        </tr>
                                 )
                             }
                         </tbody>
