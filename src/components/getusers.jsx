@@ -26,11 +26,11 @@ class getusers extends Component {
                         <tbody>
                             {
                                 this.state.users.map(
-                                    user =>
-                                        <tr key={user.id} >
-                                            <td> {user.name} </td>
-                                            <td> {user.email} </td>
-                                            <td> {user.dob} </td>
+                                    users =>
+                                        <tr key={users.id} >
+                                            <td> {users.name} </td>
+                                            <td> {users.email} </td>
+                                            <td> {users.dob} </td>
                                         </tr>
                                 )
                             }

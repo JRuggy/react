@@ -1,13 +1,12 @@
 import React from 'react';
-// import axios from 'axios';
-// import getusers  from './components/getusers';
 
 import './App.css';
+import ListEmployeeComponent from './components/ListEmployeeComponent';
 
 function App() {
   return (
-    <div className="container">
-      <getusers />
+    <div className='container'>
+      <ListEmployeeComponent />
     </div>
   );
 }
