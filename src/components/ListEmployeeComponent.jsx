@@ -41,7 +41,9 @@ class ListEmployeeComponent extends Component {
                                             <td> {employee.email} </td>
                                             <td> {employee.dob} </td>
                                             <td> {employee.age} </td>
-                                            <td> <button className='btn btn-sm btn-danger'>Delete</button> <button className='btn btn-sm btn-success'>Approve</button> </td>
+                                            <td> <button className='btn btn-sm btn-danger'>Delete</button>
+                                                <button className='btn btn-sm btn-success momo'>Approve</button>
+                                            </td>
                                         </tr>
                                 )
                             }
